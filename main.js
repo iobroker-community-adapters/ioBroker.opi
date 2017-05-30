@@ -438,7 +438,7 @@ function initPorts() {
 
     if (anyEnabled) {
         try {
-            gpio = require('opi-gpio');
+            gpio = require('rpi-gpio');
             gpio.setMode(gpio.MODE_BCM);
         } catch (e) {
             gpio = null;
