@@ -22,7 +22,7 @@
         "keywords":                 ["ioBroker", "monitoring", "raspberry", "orangepi", "odroid", "bananapi", "gpio"],
         "main":                     "main.js",
         "authors": [
-            "Christian Baumgartner", "husky-koglhof <husky.koglhof@icloud.com>"
+            "Johann Schneider", "PrinzEisenherz1 <johann.schneider1@googlemail.com>"
         ],
         "license":                  "MIT",
         "singletonHost":             true,
