@@ -115,13 +115,13 @@
         },
         "emmc": {
             "emmc_root_total": {
-                "command": "df /",
+                "command": "df -B 1024-k --block-size=1K /",
                 "regexp": "\\S+\\s+(\\d+).*\\/$",
                 "post": "$1/1024",
                 "multiline": true
             },
             "emmc_root_used": {
-                "command": "df /",
+                "command": "df -B 1024-k --block-size=1K /",
                 "regexp": "\\S+\\s+\\d+\\s+(\\d+).*\\/$",
                 "post": "$1/1024",
                 "multiline": true
