@@ -7,9 +7,9 @@
 			"de": "OPI-Monitor für ioBroker",
 			"ru": "OPI-Монитор для ioBroker"
 		},
-        "version":                  "0.0.1",
+        "version":                  "0.0.2",
         "news": {
-            "0.1.0": {
+            "0.0.1": {
                 "en": "initialrelease",
                 "de": "erstes Release",
                 "ru": ""
@@ -22,7 +22,7 @@
         "keywords":                 ["ioBroker", "monitoring", "raspberry", "orangepi", "odroid", "bananapi", "gpio"],
         "main":                     "main.js",
         "authors": [
-            "Johann Schneider", "PrinzEisenherz1 <johann.schneider1@googlemail.com>"
+            "Christian Baumgartner", "husky-koglhof <husky.koglhof@icloud.com>"
         ],
         "license":                  "MIT",
         "singletonHost":             true,
@@ -40,7 +40,6 @@
     },
     "native": {
         "c_cpu": true,
-        "c_raspberry": false,
         "c_memory": true,
         "c_network": true,
         "c_emmc": true,
@@ -63,23 +62,6 @@
             "scaling_governor": {
                 "command": "cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor",
                 "regexp": "(.*)",
-                "post": ""
-            }
-        },
-        "orangepi": {
-            "cpu_voltage": {
-                "command": "vcgencmd measure_volts core",
-                "regexp": "(\\d+.\\d+)V",
-                "post": ""
-            },
-            "mem_arm": {
-                "command": "vcgencmd get_mem arm",
-                "regexp": "(\\d+)",
-                "post": ""
-            },
-            "mem_gpu": {
-                "command": "vcgencmd get_mem gpu",
-                "regexp": "(\\d+)",
                 "post": ""
             }
         },
