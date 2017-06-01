@@ -5,7 +5,8 @@
  */
 
 var utils   = require(__dirname + '/lib/utils'); // Get common adapter utils
-var gpio;
+							 
+										
 
 var adapter = utils.adapter({
     name: 'opi',
@@ -30,6 +31,7 @@ var adapter = utils.adapter({
                 }
             });
         }
+									  
         adapter.subscribeStates('*');
 
         adapter.objects.getObjectList({include_docs: true}, function (err, res) {
@@ -43,60 +45,30 @@ var adapter = utils.adapter({
             main();
         });
     },
+									  
+																							 
+	  
     stateChange: function (id, state) {
         adapter.log.debug('stateChange for ' + id + ' found state = ' + JSON.stringify(state));
-        if (state && !state.ack) {
-            if (id.indexOf('gpio.') !== -1) {
-                var parts = id.split('.');
-                parts.pop(); // remove state
-                writeGpio(parts.pop(), state.val);
-            }
-        }
+								  
+											 
+										  
+											
+												  
+			 
+		 
     },
     unload: function (callback) {
-        if (gpio) {
-            gpio.destroy(function () {
-                if (callback) callback ();
-            });
-        } else {
-            if (callback) callback ();
-        }
+				   
+									  
+        callback();
     }
 });
 
-function writeGpio(port, value) {
-    port = parseInt(port, 10);
-    if (!adapter.config.gpios[port] || !adapter.config.gpios[port].enabled) {
-        adapter.log.warn('Port ' + port + ' is not writable, because disabled.');
-        return;
-    } else if (adapter.config.gpios[port].input === 'true' || adapter.config.gpios[port].input === true) {
-        return adapter.log.warn('Port ' + port + ' is configured as input and not writable');
-    }
-
-    if (value === 'true')  value = true;
-    if (value === 'false') value = false;
-    if (value === '0')     value = false;
-    value = !!value;
-
-    try {
-        if (gpio) {
-            gpio.write(port, value, function (err) {
-                if (err) {
-                    adapter.log.error(err);
-                } else {
-                    adapter.log.debug('Written ' + value + ' into port ' + port);
-                    adapter.setState('gpio.' + port + '.state', value, true);
-                }
-            });
-        } else {
-            adapter.log.error('GPIO is not initialized!');
-        }
-    } catch (error) {
-        adapter.log.error('Cannot write port ' + port + ': ' + error);
-    }
-}
 
 var objects;
+				 
+				 
 var exec;
 var opi      = {};
 var table    = {};
@@ -211,6 +183,8 @@ function parser() {
                 var stateObj = {
                     common: {
                         name:   c, // You can add here some description
+                        read:   true,
+                        write:  true,
                         role:   'sensor'
                     },
                     type:   'device',
@@ -234,6 +208,8 @@ function parser() {
                     for (var m = 0; m < lname.length; m++) {
                         var name = lname[m];
                         value = opi[name];
+															   
+																				
 
                         // TODO: Check if value is number and format it 2 Digits
                         if (!isNaN(value)) {
@@ -255,7 +231,7 @@ function parser() {
                                 common: {
                                     name:  objectName, // You can add here some description
                                     read:  true,
-                                    write: false,
+                                    write: true,
                                     state: 'state',
                                     role:  'value',
                                     type:  'number'
@@ -299,7 +275,7 @@ function parser() {
                                 common: {
                                     name:  objectName, // You can add here some description
                                     read:  true,
-                                    write: false,
+                                    write: true,
                                     state: 'state',
                                     role:  'value',
                                     type:  'mixed'
@@ -323,170 +299,5 @@ function parser() {
                 }
             }
         }
-    }
-}
-
-function readValue(port) {
-    if (!gpio) return adapter.log.error('GPIO is not initialized!');
-
-    gpio.read(port, function (err, value) {
-        if (err) {
-            adapter.log.error('Cannot read port ' + port + ': ' + err);
-        } else {
-            adapter.setState('gpio.' + port + '.state', !!value, true);
-        }
-    });
-}
-
-function syncPort(port, data, callback) {
-    adapter.getObject('gpio.' + port + '.state', function (err, obj) {
-        if (data.enabled) {
-            if (data.input === 'true')  data.input = true;
-            if (data.input === 'false') data.input = false;
-
-            if (err || !obj || !obj.common) {
-                obj = {
-                    common: {
-                        name:  'GPIO ' + port,
-                        type:  'boolean',
-                        role:  data.input ? 'indicator' : 'switch',
-                        read:  data.input,
-                        write: !data.input
-                    },
-                    native: {
-
-                    },
-                    type: 'state'
-                };
-                adapter.setObject('gpio.' + port + '.state', obj, function () {
-                    syncPortDirection(port, data, callback);
-                });
-            } else {
-                if (obj.common.read !== data.input) {
-                    obj.common.read  = data.input;
-                    obj.common.write = !data.input;
-                    adapter.setObject('gpio.' + port + '.state', obj, function () {
-                        syncPortDirection(port, data, callback);
-                    });
-                } else {
-                    syncPortDirection(port, data, callback);
-                }
-            }
-        } else {
-            if (obj && obj.common) {
-                adapter.delObject('gpio.' + port + '.state', function () {
-                    adapter.delState('gpio.' + port + '.state', function () {
-                        syncPortDirection(port, data, callback);
-                    });
-                });
-            } else {
-                syncPortDirection(port, data, callback);
-            }
-        }
-    });
-}
-
-function syncPortDirection(port, data, callback) {
-    adapter.getObject('gpio.' + port + '.isInput', function (err, obj) {
-        if (data.enabled) {
-            if (err || !obj || !obj.common) {
-                obj = {
-                    common: {
-                        name:  'GPIO ' + port + ' direction',
-                        type:  'boolean',
-                        role:  'state',
-                        read:  true,
-                        write: false
-                    },
-                    native: {
-
-                    },
-                    type: 'state'
-                };
-                adapter.setObject('gpio.' + port + '.isInput', obj, function () {
-                    adapter.setState('gpio.' + port + '.isInput', !data.input, true, callback);
-                });
-            } else {
-                adapter.setState('gpio.' + port + '.isInput', data.input, true, callback);
-            }
-        } else {
-            if (obj && obj.common) {
-                adapter.delObject('gpio.' + port + '.isInput', function () {
-                    adapter.delState('gpio.' + port + '.isInput', callback);
-                });
-            } else {
-                if (callback) callback();
-            }
-        }
-    });
-}
-
-function initPorts() {
-    var anyEnabled = false;
-    var anyInputs  = false;
-
-    if (adapter.config.gpios && adapter.config.gpios.length) {
-        for (var pp = 0; pp < adapter.config.gpios.length; pp++) {
-            if (!adapter.config.gpios[pp] || !adapter.config.gpios[pp].enabled) continue;
-            anyEnabled = true;
-
-            if (adapter.config.gpios[pp].input === 'true' || adapter.config.gpios[pp].input === true) {
-                anyInputs = true;
-            }
-        }
-    }
-
-    if (anyEnabled) {
-        try {
-            gpio = require('rpi-gpio');
-            gpio.setMode(gpio.MODE_BCM);
-        } catch (e) {
-            gpio = null;
-            console.error('cannot use GPIO: ' + e);
-        }
-    }
-
-    if (adapter.config.gpios && adapter.config.gpios.length) {
-        var count = 0;
-        for (var p = 0; p < adapter.config.gpios.length; p++) {
-
-            if (!adapter.config.gpios[p]) continue;
-
-            syncPort(p, adapter.config.gpios[p] || {});
-
-            if (gpio && adapter.config.gpios[p].enabled) {
-                if (adapter.config.gpios[p].input === 'true')  adapter.config.gpios[p].input = true;
-                if (adapter.config.gpios[p].input === 'false') adapter.config.gpios[p].input = false;
-
-                if (adapter.config.gpios[p].input) {
-                    count++;
-                    (function (port){
-                        gpio.setup(port, gpio.DIR_IN, gpio.EDGE_BOTH, function (err) {
-                            if (!err) {
-                                readValue(port);
-                            } else {
-                                adapter.log.error('Cannot setup port ' + port + ' as input: ' + err);
-                            }
-                            if (!--count) {
-                                adapter.log.debug('Register onchange handler');
-                                // register on change handler
-                                gpio.on('change', function (port, value) {
-                                    adapter.log.debug('GPIO change on port ' + port + ': ' + value);
-                                    adapter.setState('gpio.' + port + '.state', !!value, true);
-                                });
-                            }
-                        });
-                    })(p);
-                } else {
-                    (function (port){
-                        gpio.setup(port, gpio.DIR_OUT, function (err) {
-                            if (err) adapter.log.error('Cannot setup port ' + port + ' as output: ' + err);
-                        });
-                    })(p);
-                }
-            }
-        }
-    } else {
-        adapter.log.info('GPIO ports are not configured');
     }
 }
