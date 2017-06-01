@@ -6,15 +6,12 @@
     "node": ">=0.12"
   },
   "author": {
-    "name": "Johann Schneider",
-    "email": "johann.schneider@googlemail.com"
+    "name": "husky-koglhof",
+    "email": "husky.koglhof@icloud.com"
   },
   "contributors": [
-    "versteckt <johann.schneider@googlemail.com>"
+    "versteckt <husky.koglhof@icloud.com>"
   ],
-  "optionalDependencies": {
-    "rpi-gpio": "^0.7.0"
-  },
   "dependencies": {
     "sync-exec": "^0.6.2"
   },
@@ -32,10 +29,7 @@
   "keywords": [
     "ioBroker",
     "monitoring",
-    "raspberry",
-    "orangepi",
-    "odroid",
-    "bananapi"
+    "orangepi"
   ],
   "repository": {
     "type": "git",
