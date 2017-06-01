@@ -90,7 +90,6 @@ function main() {
         exec     = require('child_process').execSync;
     }
     parser();
-    initPorts();
 }
 
 function parser() {
