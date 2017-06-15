@@ -19,10 +19,11 @@
         "platform":                 "javascript/Node.js",
         "os":                       ["linux"],
         "loglevel":                 "info",
-        "keywords":                 ["ioBroker", "monitoring", "raspberry", "orangepi", "odroid", "bananapi", "gpio"],
+        "keywords":                 ["ioBroker", "monitoring", "orangepi"],
         "main":                     "main.js",
         "authors": [
-            "Christian Baumgartner", "husky-koglhof <husky.koglhof@icloud.com>"
+            "Christian Baumgartner", "husky-koglhof <husky.koglhof@icloud.com>",
+		"Johnny Schneider", "Johann Schneider <johann.schneider1@googlemail.com>"
         ],
         "license":                  "MIT",
         "singletonHost":             true,
