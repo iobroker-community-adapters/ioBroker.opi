@@ -92,6 +92,7 @@ On configuration page you can select following modules:
  - Initial release. Alpha Version.
 
 ## License
+Modified for OrangePi by Johnny Schneider <johann.schneider1@googlemail.com>
 
 Copyright (c) 2015-2016 husky-koglhof <husky.koglhof@icloud.com>
 
