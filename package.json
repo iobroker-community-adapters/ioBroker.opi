@@ -1,5 +1,5 @@
 {
-  "name": "iobroker.opi",
+  "name": "ioBroker.opi",
   "description": "OPI-Monitor for ioBroker Installations",
   "version": "0.0.1",
   "engines": {
@@ -24,7 +24,7 @@
     "mocha": "^2.3.4",
     "chai": "^3.4.1"
   },
-  "homepage": "https://github.com/PrinzEisenherz1/iobroker.opi",
+  "homepage": "https://github.com/PrinzEisenherz1/ioBroker.opi",
   "license": "MIT",
   "keywords": [
     "ioBroker",
@@ -33,13 +33,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/PrinzEisenherz1/iobroker.opi"
+    "url": "https://github.com/PrinzEisenherz1/ioBroker.opi"
   },
   "os": [
     "linux"
   ],
   "bugs": {
-    "url": "https://github.com/PrinzEisenherz1/iobroker.opi/issues"
+    "url": "https://github.com/PrinzEisenherz1/ioBroker.opi/issues"
   },
   "main": "main.js",
   "scripts": {
