@@ -27,7 +27,7 @@
         ],
         "license":                  "MIT",
         "singletonHost":             true,
-        "readme":                   "https://github.com/PrinzEisenherz1/iobroker.opi/blob/master/README.md",
+        "readme":                   "https://github.com/PrinzEisenherz1/ioBroker.opi/blob/master/README.md",
         "icon":                     "opi.png",
         "type":                     "hardware",
 	    "enabled":					true,
@@ -37,7 +37,7 @@
             "minHeight":  600,
             "height":     600
         },
-        "extIcon":                  "https://raw.githubusercontent.com/PrinzEisenherz1/iobroker.opi/master/admin/opi.png"
+        "extIcon":                  "https://raw.githubusercontent.com/PrinzEisenherz1/ioBroker.opi/master/admin/opi.png"
     },
     "native": {
         "c_cpu": true,
