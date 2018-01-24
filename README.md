@@ -1,4 +1,4 @@
-![Logo](admin/opi.png)
+[![Logo](admin/opi.png)]
 ioBroker OPI-Monitor Adapter
 ==============
 
@@ -73,10 +73,6 @@ On configuration page you can select following modules:
 - Temperature
 - Uptime
 - WLAN
-
-### Tested Hardware
-- OrangePi plus2 H3
-
 
 ## Changelog
 ### 0.1.0 (2018-01-24)
