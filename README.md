@@ -10,9 +10,8 @@
 OPI-Monitor implementation for integration into ioBroker.
 
 ### Important Information
-Works only with node >= 0.12
 
-# only tested Hardware: OrangePi plus2 H3
+tested Hardware: OrangePi plus2 H3
 
 
 ### Following Objects are available after selection:
