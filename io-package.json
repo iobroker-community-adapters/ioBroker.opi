@@ -1,18 +1,52 @@
 {
     "common": {
         "name":                     "opi",
-        "title":                    "OPI-Monitor",
+        "title":                    "OPi-Monitor",
+        "titleLang": {
+                "en": "OPi-monitoring",
+                "de": "OPi-Monitor",
+                "ru": "OPI-мониторинг",
+                "pt": "OPi-monitoramento",
+                "nl": "OPi-bewaking",
+                "fr": "OPi-monitoring",
+                "it": "OPI monitoraggio",
+                "es": "OPi-monitoreo",
+                "pl": "Monitorowanie OPi"
+        },
         "desc":                     {
-			"en": "OPI-Monitor for ioBroker Installations",
-			"de": "OPI-Monitor für ioBroker",
-			"ru": "OPI-Монитор для ioBroker"
-		},
-        "version":                  "0.0.2",
+                "en": "OPi-Monitor for ioBroker",
+                "de": "OPi-Monitor für ioBroker",
+                "ru": "OPI-монитор для ioBroker",
+                "pt": "OPi-Monitor para ioBroker",
+                "nl": "OPi-Monitor voor ioBroker",
+                "fr": "OPi-Monitor pour ioBroker",
+                "it": "OPi-Monitor per ioBroker",
+                "es": "OPi-Monitor para ioBroker",
+                "pl": "OPi-Monitor dla ioBroker"
+        },
+        "version":                  "0.1.0",
         "news": {
+            "0.1.0": {
+                "en": "admin3 support",
+                "de": "Admin3-Unterstützung",
+                "ru": "Поддержка admin3",
+                "pt": "suporte admin3",
+                "nl": "admin3 ondersteuning",
+                "fr": "support admin3",
+                "it": "supporto per admin3",
+                "es": "soporte de admin3",
+                "pl": "wsparcie dla administratora3"
+            },
             "0.0.1": {
                 "en": "initialrelease",
-                "de": "erstes Release",
-                "ru": ""
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie"
             }
         },
         "mode":                     "daemon",
@@ -29,8 +63,9 @@
         "singletonHost":             true,
         "readme":                   "https://github.com/PrinzEisenherz1/ioBroker.opi/blob/master/README.md",
         "icon":                     "opi.png",
+        "materialize":              true,
         "type":                     "hardware",
-	    "enabled":					true,
+	    "enabled":                  true,
         "config":{
             "minWidth":   650,
             "width":      700,

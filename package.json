@@ -1,7 +1,7 @@
 {
-  "name": "ioBroker.opi",
+  "name": "iobroker.opi",
   "description": "OPI-Monitor for ioBroker Installations",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "engines": {
     "node": ">=0.12"
   },
@@ -10,19 +10,15 @@
     "email": "husky.koglhof@icloud.com"
   },
   "contributors": [
-    "versteckt <husky.koglhof@icloud.com>"
+    "versteckt <johann.schneider1@googlemail.com>"
   ],
   "dependencies": {
     "sync-exec": "^0.6.2"
   },
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-replace": "^0.9.3",
-    "grunt-contrib-jshint": "^0.11.2",
-    "grunt-jscs": "^2.0.0",
-    "grunt-http": "^1.6.0",
-    "mocha": "^2.3.4",
-    "chai": "^3.4.1"
+    "gulp": "^3.9.1",
+    "mocha": "^4.1.0",
+    "chai": "^4.1.2"
   },
   "homepage": "https://github.com/PrinzEisenherz1/ioBroker.opi",
   "license": "MIT",
