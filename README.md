@@ -1,7 +1,6 @@
-![Logo](admin/opi.png)
-# ioBroker OPI-Monitor Adapter
-=======================
-
+![Logo](admin/admin.png)
+# ioBroker.admin
+===================
 [![NPM version](http://img.shields.io/npm/v/iobroker.opi.svg)](https://www.npmjs.com/package/iobroker.opi)
 [![Downloads](https://img.shields.io/npm/dm/iobroker.opi.svg)](https://www.npmjs.com/package/iobroker.opi)
 
