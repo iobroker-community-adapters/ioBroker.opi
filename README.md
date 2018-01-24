@@ -1,4 +1,4 @@
-[![Logo](admin/opi.png)]
+[Logo](admin/opi.png)
 ioBroker OPI-Monitor Adapter
 ==============
 
