@@ -1,31 +1,18 @@
-![Logo](admin/admin.png)
-# ioBroker.admin
+![Logo](admin/opi.png)
+# ioBroker.opi
 ===================
+
 [![NPM version](http://img.shields.io/npm/v/iobroker.opi.svg)](https://www.npmjs.com/package/iobroker.opi)
 [![Downloads](https://img.shields.io/npm/dm/iobroker.opi.svg)](https://www.npmjs.com/package/iobroker.opi)
 
 [![NPM](https://nodei.co/npm/iobroker.opi.png?downloads=true)](https://nodei.co/npm/iobroker.opi/)
 
-OPI-Monitor implementation for integration into ioBroker without GPIO`s.
+OPI-Monitor implementation for integration into ioBroker.
 
 ## Important Information
 Works only with node >= 0.12
 
-** Tested Hardware: ** OrangePi plus2 H3
-
-## Installation
-After installation you have to configure all required modules via administration page.
-
-After start of iobroker.opi, all selected modules generates
-an object tree in ioBroker within opi.<instance>.<modulename>
-e.g. opi.0.cpu
-
-Be sure, that python and build-essential are installed:
-
-```
-sudo apt-get update
-sudo apt-get install -y build-essential python
-```
+#### Tested Hardware: OrangePi plus2 H3
 
 Following Objects are available after selection:
 
