@@ -9,47 +9,48 @@
 
 OPI-Monitor implementation for integration into ioBroker.
 
-## Important Information
+### Important Information
 Works only with node >= 0.12
 
-#### Tested Hardware: OrangePi plus2 H3
+# only tested Hardware: OrangePi plus2 H3
 
-Following Objects are available after selection:
 
-#### *CPU*
+### Following Objects are available after selection:
+
+## *CPU*
 - cpu_frequency
 - load1
 - load5
 - load15
 
-#### *Memory*
+## *Memory*
 - memory_available
 - memory_free
 - memory_total
 
-#### *Network (eth0)*
+## *Network (eth0)*
 - net_received
 - net_send
 
-#### *eMMC*
+## *eMMC*
 - emmc_root_total
 - emmc_root_used
 
-#### *Swap*
+## *Swap*
 - swap_total
 - swap_used
 
-#### *Temperature*
+## *Temperature*
 - soc_temp
 
-#### *Uptime*
+## *Uptime*
 - uptime
 
-#### *WLAN*
+## *WLAN*
 - wifi_received
 - wifi_send
 
-## Configuration
+### Configuration
 On configuration page you can select following modules:
 
 - CPU
@@ -61,14 +62,14 @@ On configuration page you can select following modules:
 - Uptime
 - WLAN
 
-## Changelog
-### 0.1.0 (2018-01-24)
+### Changelog
+## 0.1.0 (2018-01-24)
 - Admin3 support.
 
-### 0.0.6 (2017-08-01)
+## 0.0.6 (2017-08-01)
 - stable release.
 
-### 0.0.2 (2017-06-01)
+## 0.0.2 (2017-06-01)
 - Initial release. Beta Version.
 
 
