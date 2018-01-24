@@ -73,7 +73,7 @@ On configuration page you can select following modules:
 - Temperature
 - Uptime
 - WLAN
-
+###
 ## Tested Hardware
  - OrangePi plus2 H3
 
@@ -86,7 +86,7 @@ On configuration page you can select following modules:
 
 ### 0.0.2 (2017-06-01)
  - Initial release. Beta Version.
-
+###
 ## License
 Modified for OrangePi by Johnny Schneider <johann.schneider1@googlemail.com>
 
