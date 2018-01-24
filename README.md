@@ -1,4 +1,4 @@
-![Logo](admin/opi.png)
+[![Logo](admin/opi.png)]
 ioBroker OPI-Monitor Adapter
 ==============
 
@@ -74,22 +74,18 @@ On configuration page you can select following modules:
 - Uptime
 - WLAN
 
-## Logfiles / Configuration Settings
-
-## Features
-
-## Todo
-
 ## Tested Hardware
  - OrangePi plus2 H3
 
 ## Changelog
+### 0.1.0 (2018-01-24)
+ - Admin3 support.
+
+### 0.0.6 (2017-08-01)
+ - stable release.
 
 ### 0.0.2 (2017-06-01)
- - removed GPIO`s. Alpha Version.
-
-### 0.0.1 (2017-06-01)
- - Initial release. Alpha Version.
+ - Initial release. Beta Version.
 
 ## License
 Modified for OrangePi by Johnny Schneider <johann.schneider1@googlemail.com>
