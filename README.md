@@ -1,6 +1,6 @@
-[![Logo](admin/opi.png)]
-ioBroker OPI-Monitor Adapter
-==============
+![Logo](admin/opi.png)
+# ioBroker OPI-Monitor Adapter
+=======================
 
 [![NPM version](http://img.shields.io/npm/v/iobroker.opi.svg)](https://www.npmjs.com/package/iobroker.opi)
 [![Downloads](https://img.shields.io/npm/dm/iobroker.opi.svg)](https://www.npmjs.com/package/iobroker.opi)
@@ -12,6 +12,7 @@ OPI-Monitor implementation for integration into ioBroker without GPIO`s.
 ## Important Information
 Works only with node >= 0.12
 
+** Tested Hardware: ** OrangePi plus2 H3
 
 ## Installation
 After installation you have to configure all required modules via administration page.
