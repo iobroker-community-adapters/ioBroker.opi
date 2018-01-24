@@ -29,36 +29,36 @@ sudo apt-get install -y build-essential python
 
 Following Objects are available after selection:
 
-#### **CPU**
+#### *CPU*
 - cpu_frequency
 - load1
 - load5
 - load15
 
-#### **Memory**
+#### *Memory*
 - memory_available
 - memory_free
 - memory_total
 
-#### **Network (eth0)**
+#### *Network (eth0)*
 - net_received
 - net_send
 
-#### **eMMC**
+#### *eMMC*
 - emmc_root_total
 - emmc_root_used
 
-#### **Swap**
+#### *Swap*
 - swap_total
 - swap_used
 
-#### **Temperature**
+#### *Temperature*
 - soc_temp
 
-#### **Uptime**
+#### *Uptime*
 - uptime
 
-#### **WLAN**
+#### *WLAN*
 - wifi_received
 - wifi_send
 
@@ -73,20 +73,22 @@ On configuration page you can select following modules:
 - Temperature
 - Uptime
 - WLAN
-###
+
 ## Tested Hardware
- - OrangePi plus2 H3
+- OrangePi plus2 H3
+
 
 ## Changelog
 ### 0.1.0 (2018-01-24)
- - Admin3 support.
+- Admin3 support.
 
 ### 0.0.6 (2017-08-01)
- - stable release.
+- stable release.
 
 ### 0.0.2 (2017-06-01)
- - Initial release. Beta Version.
-###
+- Initial release. Beta Version.
+
+
 ## License
 Modified for OrangePi by Johnny Schneider <johann.schneider1@googlemail.com>
 
