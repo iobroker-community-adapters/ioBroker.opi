@@ -1,7 +1,7 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="../../lib/css/themes/jquery-ui/redmond/jquery-ui.min.css"/>
-<script type="text/javascript" src="../../lib/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../lib/js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="../../socket.io/socket.io.js"></script>
 <script type="text/javascript" src="../../lib/js/jquery-ui-1.10.3.full.min.js"></script>
 
@@ -20,7 +20,7 @@
 </style>
 
 <script type="text/javascript">
-// changed = false;
+changed = false;
     function setValue(id, value, onChange) {
         // example: select elements with id=key and class=value and insert value
         if ($('#' + id + '.value').attr('type') === 'checkbox') {
@@ -62,8 +62,6 @@
             setValue(key, settings[key], onChange);
         }
         onChange(false);
-        showGpios(settings.gpios || [], onChange);
-        $('#tabs').tabs();
     }
     function save(callback) {
         var obj = {};
@@ -86,12 +84,7 @@
     <table><tr>
         <td><img src="opi.png" width="64" height="64"></td>
         <td style="padding-top: 20px;padding-left: 10px"><h3 class="translate">OPI-Monitor Adapter settings</h3></td>
-    </tr></table
-	<div id="tabs">
-<!-- <ul> -->
-<!-- <li><a href="#tabs-1" class="translate">Poll</a></li> -->
-<!-- </ul> -->
-	<div id="tabs-1">
+    </tr></table>
     <table>
             <tbody>
                     <tr>
@@ -128,7 +121,5 @@
                     </tr>
                 </tbody>
             </table>
-		</div>
-	</div>
 </div>
 </body></html>
