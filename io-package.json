@@ -24,8 +24,19 @@
                 "es": "OPi-Monitor para ioBroker",
                 "pl": "OPi-Monitor dla ioBroker"
         },
-        "version":                  "0.1.0",
+        "version":                  "0.1.1",
         "news": {
+            "0.1.1": {
+                "en": "update index_m.html",
+                "de": "Aktualisieren Sie index_m.html",
+                "ru": "Обновить index_m.html",
+                "pt": "atualização index_m.html",
+                "nl": "update index_m.html",
+                "fr": "mettre à jour index_m.html",
+                "it": "aggiorna index_m.html",
+                "es": "actualizar index_m.html",
+                "pl": "aktualizować index_m.html"
+            },
             "0.1.0": {
                 "en": "admin3 support",
                 "de": "Admin3-Unterstützung",
@@ -65,13 +76,7 @@
         "icon":                     "opi.png",
         "materialize":              true,
         "type":                     "hardware",
-	    "enabled":                  true,
-        "config":{
-            "minWidth":   650,
-            "width":      700,
-            "minHeight":  600,
-            "height":     600
-        },
+        "enabled":                  true,
         "extIcon":                  "https://raw.githubusercontent.com/PrinzEisenherz1/ioBroker.opi/master/admin/opi.png"
     },
     "native": {
@@ -82,7 +87,7 @@
         "c_swap": true,
         "c_temperature": true,
         "c_uptime": true,
-        "c_wlan": true,
+        "c_wlan": false,
         "interval": 60000,
         "cpu": {
             "cpu_frequency": {
@@ -184,10 +189,7 @@
                 "regexp": "(.*)",
                 "post": ""
             }
-        },
-        "gpios": [
-
-        ]
+        }
     },
     "objects": [
     ],

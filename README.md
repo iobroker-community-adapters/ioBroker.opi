@@ -62,6 +62,11 @@ On configuration page you can select following modules:
 - WLAN
 
 ### Changelog
+## 0.1.1 (2018-01-27)
+- update index_m.html.
+- update index.html.
+- update codes.
+
 ## 0.1.0 (2018-01-24)
 - Admin3 support.
 
