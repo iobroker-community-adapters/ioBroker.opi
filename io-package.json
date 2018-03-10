@@ -119,9 +119,8 @@
             },
             "memory_available": {
                 "command": "/usr/bin/free -k",
-                "regexp": "^-\\/\\+ buffers\\/cache:\\s+\\d+\\s+(\\d+)",
-                "post": "$1/1024",
-                "multiline": true
+                "regexp": "Mem:\\s+\\d+\\s+\\d+\\s+\\d+\\s+\\d+\\s+\\d+\\s+(\\d+)",
+                "post": "$1/1024"
             }
         },
         "network": {
