@@ -20,7 +20,7 @@
     "mocha": "^4.1.0",
     "chai": "^4.1.2"
   },
-  "homepage": "https://github.com/PrinzEisenherz1/ioBroker.opi",
+  "homepage": "https://github.com/ioBroker/ioBroker.opi",
   "license": "MIT",
   "keywords": [
     "ioBroker",
@@ -29,13 +29,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/PrinzEisenherz1/ioBroker.opi"
+    "url": "https://github.com/ioBroker/ioBroker.opi"
   },
   "os": [
     "linux"
   ],
   "bugs": {
-    "url": "https://github.com/PrinzEisenherz1/ioBroker.opi/issues"
+    "url": "https://github.com/ioBroker/ioBroker.opi/issues"
   },
   "main": "main.js",
   "scripts": {
