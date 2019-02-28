@@ -118,10 +118,9 @@
                 "post": "$1/1024"
             },
             "memory_available": {
-                "command": "/usr/bin/free -mk",
-                "regexp": "^-\\/\\+ buffers\\/cache:\\s+\\d+\\s+(\\d+)",
-                "post": "$1/1024",
-                "multiline": true
+                "command": "/usr/bin/free -k",
+                "regexp": "Mem:\\s+\\d+\\s+\\d+\\s+\\d+\\s+\\d+\\s+\\d+\\s+(\\d+)",
+                "post": "$1/1024"
             }
         },
         "network": {
@@ -168,7 +167,7 @@
             "soc_temp": {
                 "command": "cat /sys/devices/virtual/thermal/thermal_zone0/temp",
                 "regexp": "(.*)",
-                "post": "$1"
+                "post": "$1/1000"
             }
         },
         "uptime": {
