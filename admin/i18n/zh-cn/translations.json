@@ -1,0 +1,12 @@
+{
+    "CPU": "中央处理器",
+    "Memory": "记忆",
+    "Network": "网络",
+    "OPI-Monitor Adapter settings": "OPI-Monitor适配器设置",
+    "OrangePi": "OrangePi",
+    "Swap": "交换",
+    "Temperature": "温度",
+    "Uptime": "正常运行时间",
+    "WLAN": "WLAN",
+    "eMMC": "的eMMC"
+}

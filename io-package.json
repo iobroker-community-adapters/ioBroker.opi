@@ -1,30 +1,32 @@
 {
     "common": {
-        "name":                     "opi",
-        "title":                    "OPi-Monitor",
+        "name": "opi",
+        "title": "OPi-Monitor",
         "titleLang": {
-                "en": "OPi-monitoring",
-                "de": "OPi-Monitor",
-                "ru": "OPI-мониторинг",
-                "pt": "OPi-monitoramento",
-                "nl": "OPi-bewaking",
-                "fr": "OPi-monitoring",
-                "it": "OPI monitoraggio",
-                "es": "OPi-monitoreo",
-                "pl": "Monitorowanie OPi"
+            "en": "OPi-monitoring",
+            "de": "OPi-Monitor",
+            "ru": "OPI-мониторинг",
+            "pt": "OPi-monitoramento",
+            "nl": "OPi-bewaking",
+            "fr": "OPi-monitoring",
+            "it": "OPI monitoraggio",
+            "es": "OPi-monitoreo",
+            "pl": "Monitorowanie OPi",
+            "zh-cn": "OPI-监控"
         },
-        "desc":                     {
-                "en": "OPi-Monitor for ioBroker",
-                "de": "OPi-Monitor für ioBroker",
-                "ru": "OPI-монитор для ioBroker",
-                "pt": "OPi-Monitor para ioBroker",
-                "nl": "OPi-Monitor voor ioBroker",
-                "fr": "OPi-Monitor pour ioBroker",
-                "it": "OPi-Monitor per ioBroker",
-                "es": "OPi-Monitor para ioBroker",
-                "pl": "OPi-Monitor dla ioBroker"
+        "desc": {
+            "en": "OPi-Monitor for ioBroker",
+            "de": "OPi-Monitor für ioBroker",
+            "ru": "OPI-монитор для ioBroker",
+            "pt": "OPi-Monitor para ioBroker",
+            "nl": "OPi-Monitor voor ioBroker",
+            "fr": "OPi-Monitor pour ioBroker",
+            "it": "OPi-Monitor per ioBroker",
+            "es": "OPi-Monitor para ioBroker",
+            "pl": "OPi-Monitor dla ioBroker",
+            "zh-cn": "适用于ioBroker的OPi-Monitor"
         },
-        "version":                  "0.1.1",
+        "version": "0.1.1",
         "news": {
             "0.1.1": {
                 "en": "update index_m.html",
@@ -35,7 +37,8 @@
                 "fr": "mettre à jour index_m.html",
                 "it": "aggiorna index_m.html",
                 "es": "actualizar index_m.html",
-                "pl": "aktualizować index_m.html"
+                "pl": "aktualizować index_m.html",
+                "zh-cn": "更新index_m.html"
             },
             "0.1.0": {
                 "en": "admin3 support",
@@ -46,7 +49,8 @@
                 "fr": "support admin3",
                 "it": "supporto per admin3",
                 "es": "soporte de admin3",
-                "pl": "wsparcie dla administratora3"
+                "pl": "wsparcie dla administratora3",
+                "zh-cn": "admin3支持"
             },
             "0.0.1": {
                 "en": "initialrelease",
@@ -57,27 +61,36 @@
                 "fr": "Première version",
                 "it": "Versione iniziale",
                 "es": "Versión inicial",
-                "pl": "Pierwsze wydanie"
+                "pl": "Pierwsze wydanie",
+                "zh-cn": "初始发行"
             }
         },
-        "mode":                     "daemon",
-        "platform":                 "javascript/Node.js",
-        "os":                       ["linux"],
-        "loglevel":                 "info",
-        "keywords":                 ["ioBroker", "monitoring", "orangepi"],
-        "main":                     "main.js",
-        "authors": [
-            "Christian Baumgartner", "husky-koglhof <husky.koglhof@icloud.com>",
-		"Johnny Schneider", "Johann Schneider <johann.schneider1@googlemail.com>"
+        "mode": "daemon",
+        "platform": "javascript/Node.js",
+        "os": [
+            "linux"
         ],
-        "license":                  "MIT",
-        "singletonHost":             true,
-        "readme":                   "https://github.com/ioBroker/ioBroker.opi/blob/master/README.md",
-        "icon":                     "opi.png",
-        "materialize":              true,
-        "type":                     "hardware",
-        "enabled":                  true,
-        "extIcon":                  "https://raw.githubusercontent.com/ioBroker/ioBroker.opi/master/admin/opi.png"
+        "loglevel": "info",
+        "keywords": [
+            "ioBroker",
+            "monitoring",
+            "orangepi"
+        ],
+        "main": "main.js",
+        "authors": [
+            "Christian Baumgartner",
+            "husky-koglhof <husky.koglhof@icloud.com>",
+            "Johnny Schneider",
+            "Johann Schneider <johann.schneider1@googlemail.com>"
+        ],
+        "license": "MIT",
+        "singletonHost": true,
+        "readme": "https://github.com/ioBroker/ioBroker.opi/blob/master/README.md",
+        "icon": "opi.png",
+        "materialize": true,
+        "type": "hardware",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.opi/master/admin/opi.png"
     },
     "native": {
         "c_cpu": true,
@@ -190,8 +203,6 @@
             }
         }
     },
-    "objects": [
-    ],
-    "instanceObjects": [
-    ]
+    "objects": [],
+    "instanceObjects": []
 }

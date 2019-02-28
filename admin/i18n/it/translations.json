@@ -1,0 +1,12 @@
+{
+    "CPU": "processore",
+    "Memory": "Memoria",
+    "Network": "Rete",
+    "OPI-Monitor Adapter settings": "Impostazioni dell'adattatore per monitor OPI",
+    "OrangePi": "OrangePi",
+    "Swap": "Scambiare",
+    "Temperature": "Temperatura",
+    "Uptime": "uptime",
+    "WLAN": "WLAN",
+    "eMMC": "eMMC"
+}
