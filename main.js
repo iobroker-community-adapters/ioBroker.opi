@@ -8,7 +8,7 @@ var utils   = require(__dirname + '/lib/utils'); // Get common adapter utils
 							 
 										
 
-var adapter = utils.adapter({
+var adapter = utils.Adapter({
     name: 'opi',
 
     ready: function () {
