@@ -85,12 +85,12 @@
         ],
         "license": "MIT",
         "singletonHost": true,
-        "readme": "https://github.com/ioBroker/ioBroker.opi/blob/master/README.md",
+        "readme": "https://github.com/ioBroker-community-adapters/ioBroker.opi/blob/master/README.md",
         "icon": "opi.png",
         "materialize": true,
         "type": "hardware",
         "enabled": true,
-        "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.opi/master/admin/opi.png"
+        "extIcon": "https://raw.githubusercontent.com/ioBroker-community-adapters/ioBroker.opi/master/admin/opi.png"
     },
     "native": {
         "c_cpu": true,
