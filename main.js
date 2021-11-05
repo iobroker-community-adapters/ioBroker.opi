@@ -5,15 +5,15 @@
  */
 
 var utils   = require(__dirname + '/lib/utils'); // Get common adapter utils
-							 
-										
+
+
 
 var adapter = utils.Adapter({
     name: 'opi',
 
     ready: function () {
         if (adapter.config.forceinit) {
-            adapter.objects.getObjectList({startkey: adapter.name + '.' + adapter.instance, endkey: adapter.name + '.' + adapter.instance + '\u9999'}, function (err, res) {
+            adapter.getObjectList({startkey: adapter.name + '.' + adapter.instance, endkey: adapter.name + '.' + adapter.instance + '\u9999'}, function (err, res) {
                 res = res.rows;
                 for (var i = 0; i < res.length; i++) {
                     var id = res[i].doc.common.name;
@@ -31,10 +31,10 @@ var adapter = utils.Adapter({
                 }
             });
         }
-									  
+
         adapter.subscribeStates('*');
 
-        adapter.objects.getObjectList({include_docs: true}, function (err, res) {
+        adapter.getObjectList({include_docs: true}, function (err, res) {
             res = res.rows;
             objects = {};
             for (var i = 0; i < res.length; i++) {
@@ -45,30 +45,30 @@ var adapter = utils.Adapter({
             main();
         });
     },
-									  
-																							 
-	  
+
+
+
     stateChange: function (id, state) {
         adapter.log.debug('stateChange for ' + id + ' found state = ' + JSON.stringify(state));
-								  
-											 
-										  
-											
-												  
-			 
-		 
+
+
+
+
+
+
+
     },
     unload: function (callback) {
-				   
-									  
+
+
         callback();
     }
 });
 
 
 var objects;
-				 
-				 
+
+
 var exec;
 var opi      = {};
 var table    = {};
@@ -135,7 +135,7 @@ function parser() {
                     adapter.log.debug(er.stack);
                     if (er.pid) console.log('%s (pid: %d) exited with status %d',
                         er.file, er.pid, er.status);
-                    // do not process if exec fails 
+                    // do not process if exec fails
                     continue;
                 }
 
@@ -207,8 +207,8 @@ function parser() {
                     for (var m = 0; m < lname.length; m++) {
                         var name = lname[m];
                         value = opi[name];
-															   
-																				
+
+
 
                         // TODO: Check if value is number and format it 2 Digits
                         if (!isNaN(value)) {
