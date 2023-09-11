@@ -12,6 +12,9 @@
   "contributors": [
     "versteckt <johann.schneider1@googlemail.com>"
   ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "dependencies": {
     "sync-exec": "^0.6.2"
   },
