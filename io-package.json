@@ -1,7 +1,6 @@
 {
     "common": {
         "name": "opi",
-        "title": "OPi-Monitor",
         "titleLang": {
             "en": "OPi-monitoring",
             "de": "OPi-Monitor",
@@ -83,6 +82,7 @@
             "linux"
         ],
         "loglevel": "info",
+        "tier": 2,
         "keywords": [
             "ioBroker",
             "monitoring",
@@ -95,14 +95,27 @@
             "Johnny Schneider",
             "Johann Schneider <johann.schneider1@googlemail.com>"
         ],
-        "license": "MIT",
+        "licenseInformation": {
+            "license": "MIT",
+            "type": "free"
+          },
         "singletonHost": true,
         "readme": "https://github.com/ioBroker-community-adapters/ioBroker.opi/blob/master/README.md",
         "icon": "opi.png",
         "materialize": true,
         "type": "hardware",
         "enabled": true,
-        "extIcon": "https://raw.githubusercontent.com/ioBroker-community-adapters/ioBroker.opi/master/admin/opi.png"
+        "extIcon": "https://raw.githubusercontent.com/ioBroker-community-adapters/ioBroker.opi/master/admin/opi.png",
+        "dependencies": [
+            {
+              "js-controller": ">=5.0.19"
+            }
+        ],
+          "globalDependencies": [
+            {
+              "admin": ">=6.13.16"
+            }
+        ]
     },
     "native": {
         "c_cpu": true,
