@@ -88,7 +88,6 @@
             "monitoring",
             "orangepi"
         ],
-        "main": "main.js",
         "authors": [
             "Christian Baumgartner",
             "husky-koglhof <husky.koglhof@icloud.com>",
