@@ -2,12 +2,10 @@
   "name": "iobroker.opi",
   "description": "OPI-Monitor for ioBroker Installations",
   "version": "0.1.2",
-  "author": {
-    "name": "husky-koglhof",
-    "email": "husky.koglhof@icloud.com"
-  },
+  "author": "husky-koglhof <husky.koglhof@icloud.com>",
   "contributors": [
-    "versteckt <johann.schneider1@googlemail.com>"
+    "versteckt <johann.schneider1@googlemail.com>",
+    "iobroker-community-adapters <iobroker-community-adapters@gmx.de>"
   ],
   "engines": {
     "node": ">=18"
