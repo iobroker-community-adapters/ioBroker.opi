@@ -8,7 +8,7 @@
     "iobroker-community-adapters <iobroker-community-adapters@gmx.de>"
   ],
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "dependencies": {
     "sync-exec": "^0.6.2"
