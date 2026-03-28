@@ -87,7 +87,7 @@ function main() {
         oldstyle = true;
     } else {
         adapter.log.debug('NODE Version = ' + version + ', we need new execSync');
-        exec     = require('child_process').execSync;
+        exec     = require('node:child_process').execSync;
     }
     parser();
 }
