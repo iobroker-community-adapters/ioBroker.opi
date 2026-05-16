@@ -89,7 +89,7 @@ On configuration page you can select following modules:
 
 
 ## License
-Copyright (c) 2024 iobroker-community-adapters <iobroker-community-adapters@gmx.de>
+Copyright (c) 2024-2026 iobroker-community-adapters <iobroker-community-adapters@gmx.de>
 Modified for OrangePi by Johnny Schneider <johann.schneider1@googlemail.com>
 Copyright (c) 2015-2016 husky-koglhof <husky.koglhof@icloud.com>
 
