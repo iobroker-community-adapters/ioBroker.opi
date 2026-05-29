@@ -103,7 +103,6 @@
     "singletonHost": true,
     "readme": "https://github.com/ioBroker-community-adapters/ioBroker.opi/blob/master/README.md",
     "icon": "opi.png",
-    "materialize": true,
     "type": "hardware",
     "enabled": true,
     "extIcon": "https://raw.githubusercontent.com/ioBroker-community-adapters/ioBroker.opi/master/admin/opi.png",
@@ -116,7 +115,10 @@
       {
         "admin": ">=7.6.17"
       }
-    ]
+    ],
+    "adminUI": {
+      "config": "materialize"
+    }
   },
   "native": {
     "c_cpu": true,
