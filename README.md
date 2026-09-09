@@ -61,7 +61,7 @@ On configuration page you can select following modules:
 - Uptime
 - WLAN
 
-### Changelog
+## Changelog
 <!--
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
