@@ -84,7 +84,6 @@
     "loglevel": "info",
     "tier": 2,
     "keywords": [
-      "ioBroker",
       "monitoring",
       "orangepi"
     ],
